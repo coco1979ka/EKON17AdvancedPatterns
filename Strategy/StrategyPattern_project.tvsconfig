@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="namespaceFolder.FastestRoute" Type="System.String" Value="FastestRoute" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.RouteStrategy" Type="System.String" Value="RouteStrategy" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.NullRoute" Type="System.String" Value="NullRoute" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Coordinates" Type="System.String" Value="Coordinates" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.ShortestRoute" Type="System.String" Value="ShortestRoute" Category="General" IsBrowsable="False" />
+</TgConfig>

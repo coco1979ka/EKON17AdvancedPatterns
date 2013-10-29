@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FB5B2DEA-1A0D-44F5-9E1B-31EBFD5633E9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Strategy\StrategyPattern.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Command\CommandPattern.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Builder\BuilderPattern.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Observer\ObserverPattern.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StatePattern\StatePattern.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Decorator\DecoratorPattern.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="StrategyPattern">
+        <MSBuild Projects="Strategy\StrategyPattern.dproj"/>
+    </Target>
+    <Target Name="StrategyPattern:Clean">
+        <MSBuild Projects="Strategy\StrategyPattern.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StrategyPattern:Make">
+        <MSBuild Projects="Strategy\StrategyPattern.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CommandPattern">
+        <MSBuild Projects="Command\CommandPattern.dproj"/>
+    </Target>
+    <Target Name="CommandPattern:Clean">
+        <MSBuild Projects="Command\CommandPattern.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CommandPattern:Make">
+        <MSBuild Projects="Command\CommandPattern.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BuilderPattern">
+        <MSBuild Projects="Builder\BuilderPattern.dproj"/>
+    </Target>
+    <Target Name="BuilderPattern:Clean">
+        <MSBuild Projects="Builder\BuilderPattern.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BuilderPattern:Make">
+        <MSBuild Projects="Builder\BuilderPattern.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ObserverPattern">
+        <MSBuild Projects="Observer\ObserverPattern.dproj"/>
+    </Target>
+    <Target Name="ObserverPattern:Clean">
+        <MSBuild Projects="Observer\ObserverPattern.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ObserverPattern:Make">
+        <MSBuild Projects="Observer\ObserverPattern.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StatePattern">
+        <MSBuild Projects="StatePattern\StatePattern.dproj"/>
+    </Target>
+    <Target Name="StatePattern:Clean">
+        <MSBuild Projects="StatePattern\StatePattern.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StatePattern:Make">
+        <MSBuild Projects="StatePattern\StatePattern.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DecoratorPattern">
+        <MSBuild Projects="Decorator\DecoratorPattern.dproj"/>
+    </Target>
+    <Target Name="DecoratorPattern:Clean">
+        <MSBuild Projects="Decorator\DecoratorPattern.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DecoratorPattern:Make">
+        <MSBuild Projects="Decorator\DecoratorPattern.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="StrategyPattern;CommandPattern;BuilderPattern;ObserverPattern;StatePattern;DecoratorPattern"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="StrategyPattern:Clean;CommandPattern:Clean;BuilderPattern:Clean;ObserverPattern:Clean;StatePattern:Clean;DecoratorPattern:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="StrategyPattern:Make;CommandPattern:Make;BuilderPattern:Make;ObserverPattern:Make;StatePattern:Make;DecoratorPattern:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
