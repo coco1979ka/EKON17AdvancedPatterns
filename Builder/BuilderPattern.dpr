@@ -15,9 +15,10 @@ begin
   try
     { TODO -oUser -cConsole Main : Insert code here }
     MyCar := TCar.Builder
-                 .SetDoors(tdTwo)
+                 .SetDoors(tdFour)
                  .SetEngine(epHigh)
                  .AddEntertainmentSystem
+                 .AddNavigation
                  .Build();
     try
       MyCar.ShowConfiguration;

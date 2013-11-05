@@ -21,11 +21,11 @@ begin
     { TODO -oUser -cConsole Main : Insert code here }
 
     Writeln('Berechne Route von Köln nach Düsseldorf: ');
-    Navi := TNavigator.Create();
+    Navi := TNavigator.Create(TNullRoute.Create);
     try
       Navi.FromCity := 'Köln';
       Navi.ToCity := 'Düsseldorf';
-      Navi.SetRouteStrategy(TFastestRoute.Create);
+      //Navi.SetRouteStrategy(TFastestRoute.Create);
       Writeln(Navi.CalculateRoute);
     finally
       Navi.Free;

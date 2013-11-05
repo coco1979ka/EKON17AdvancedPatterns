@@ -116,7 +116,7 @@ end;
 
 constructor THalfOpenState.Create(TimeOut: TTimeSpan);
 begin
-
+  FTimeOut := TimeOut;
 end;
 
 procedure THalfOpenState.Guard;
